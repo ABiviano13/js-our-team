@@ -1,0 +1,44 @@
+.header-card{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+
+.title-card::after{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\e533";
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    width: 80%;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 2%;
+}
+
+.text-info-card{
+    text-align: center;
+}
+
+.name{
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.role{
+    color: gray;
+    font-size: 10px;
+}
