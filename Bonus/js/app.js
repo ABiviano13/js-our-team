@@ -6,6 +6,13 @@ function getFullName() {
 	return `${firstName} ${lastName}`
 }
 
+function isImg(immagine){
+    const imgElementCreate = document.createElement('img');
+    console.log(imgElementCreate);
+
+    imgElementCreate.src = immagine;
+}
+
 //Creiamo un array di oggetti e forniamo le seguenti informazioni (nome, ruolo, img)
 const persona = {
     firstName: 'Wayne',
@@ -82,7 +89,6 @@ for(let i = 0; i < teamArray.length; i++){
     `
     <div class="col-4">
         <div class="card">
-            <img src="${imgPersona}" alt="img-team">
             <div class="text-info-card">
                 <div class="name">
                     ${fullName}
