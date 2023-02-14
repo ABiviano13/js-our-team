@@ -89,6 +89,7 @@ for(let i = 0; i < teamArray.length; i++){
     `
     <div class="col-4">
         <div class="card">
+        <img src="${imgPersona}" alt="img-team">
             <div class="text-info-card">
                 <div class="name">
                     ${fullName}
