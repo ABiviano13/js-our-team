@@ -14,7 +14,7 @@ const persona = {
     img: 'wayne-barnett-founder-ceo.jpg'
 };
 
-const team = [
+const teamArray = [
     persona,
     {
         firstName: 'Angela',
@@ -48,3 +48,13 @@ const team = [
     }
 
 ];
+
+console.log(teamArray);
+
+//Stampare in console le informazioni di ogni membro del team (for-in)
+for(let teamInfo in teamArray){
+    // console.log(teamArray[teamInfo]);
+
+    const teamArrayValue = teamArray[teamInfo];
+    console.log(teamArrayValue);
+}
