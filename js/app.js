@@ -11,7 +11,7 @@ const persona = {
     firstName: 'Wayne',
     lastName: 'Barnett',
     role: 'Founder & CEO',
-    img: 'wayne-barnett-founder-ceo.jpg',
+    img: './img/wayne-barnett-founder-ceo.jpg',
     getFullName: getFullName
 };
 
@@ -21,35 +21,35 @@ const teamArray = [
         firstName: 'Angela',
         lastName: 'Caroll',
         role: 'Chief Editor',
-        img: 'angela-caroll-chief-editor.jpg',
+        img: './img/angela-caroll-chief-editor.jpg',
         getFullName: getFullName
     },
     {
         firstName: 'Walter',
         lastName: 'Gordon',
         role: 'Office Manager',
-        img: 'walter-gordon-office-manager.jpg',
+        img: './img/walter-gordon-office-manager.jpg',
         getFullName: getFullName
     },
     {
         firstName: 'Angela',
         lastName: 'Lopez',
         role: 'Social Media Manager',
-        img: 'angela-lopez-social-media-manager.jpg',
+        img: './img/angela-lopez-social-media-manager.jpg',
         getFullName: getFullName
     },
     {
         firstName: 'Scott',
         lastName: 'Estrada',
         role: 'Developer',
-        img: 'scott-estrada-developer.jpg',
+        img: './img/scott-estrada-developer.jpg',
         getFullName: getFullName
     },
     {
         firstName: 'Barbara',
         lastName: 'Ramos',
         role: 'Graphic Designer',
-        img: 'barbara-ramos-graphic-designer.jpg',
+        img: './img/barbara-ramos-graphic-designer.jpg',
         getFullName: getFullName
     }
 
@@ -65,6 +65,10 @@ for(let teamInfo in teamArray){
     // console.log(teamArrayValue);
 }
 
+//Stampare nel DOM le informazioni di ogni membro del team
+
+const rowElement = document.querySelector('.row');
+
 for(let i = 0; i < teamArray.length; i++){
     const personaCorrente = teamArray[i];
 
@@ -73,4 +77,18 @@ for(let i = 0; i < teamArray.length; i++){
     const imgPersona = personaCorrente.img;
 
     console.log(fullName, role, imgPersona);
+
+    const card = `
+    <div class="col">
+        <div class="card">
+            <img src="${imgPersona}" alt="img-team">
+            <div class="text-info">
+                ${fullName}
+                ${role}
+            </div>
+        </div>
+    </div>
+  `
+
+	rowElement.innerHTML += card
 }
